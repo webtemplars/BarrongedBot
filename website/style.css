@@ -27,16 +27,22 @@ div#mainform {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-
     background-color: rgba(0,0,0,.1);
+    text-align: center;
 }
 
 form input {
     background-color: #133337;
+    color: #ccc;
     padding: 15px;
     border: none;
     opacity: .7;
     transition: .4s background-color;
+    width: 215px;
+}
+
+form input#coolbutton {
+    width: 100px !important;
 }
 
 form input#coolbutton:hover {

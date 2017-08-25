@@ -1,6 +1,6 @@
 <?php
 
-$script = '';
+$script = ''; // The location of the script
 $sid = $GET_['sid'];
 
 $exit_status = exec('python3.6 $script $sid');
