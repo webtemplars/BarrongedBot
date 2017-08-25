@@ -25,14 +25,36 @@ def bReport(bot, target):
             'rpt_textabuse': 1,
             'rpt_voiceabuse': 1
          })
-        response, = cs.wait_event(csgo.enums.ECsgoGCMsg.EMsgGCCStrike15_v2_ClientReportResponse, timeout=10)
+        response = cs.wait_event(csgo.enums.ECsgoGCMsg.EMsgGCCStrike15_v2_ClientReportResponse, timeout=10)
         return response
 
     client.login(user, pasw)
     client.run_forever()
 
 def bCommend(bot, target):
-    pass
+    user = bot[0]
+    pasw = bot[1]
+    client = SteamClient()
+    cs = CSGOClient(client)
+
+    @client.on('logged_on')
+    def start_csgo():
+        cs.launch()
+
+    @cs.on('ready')
+    def gc_ready():
+        cs.send(csgo.enums.ECsgoGCMsg.EMsgGCCStrike15_v2_ClientCommendPlayer, {
+            'account_id': target,
+            'match_id': 0,
+            'cmd_friendly': 1,
+            'cmd_teaching': 1,
+            'cmd_leader': 1
+         })
+        response = cs.wait_event(csgo.enums.ECsgoGCMsg.EMsgGCCStrike15_v2_ClientReportResponse, timeout=10)
+        return response
+
+    client.login(user, pasw)
+    client.run_forever()
 
 def main():
     # BOTS
