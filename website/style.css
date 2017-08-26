@@ -17,6 +17,7 @@ body {
 }
 
 div#mainform {
+    background: linear-gradient(135deg, transparent 30px, rgba(0,0,0,.2) 0) top;
     position: fixed;
     width: 640px;
     height: 130px;
@@ -28,7 +29,6 @@ div#mainform {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: rgba(0,0,0,.1);
     text-align: center;
 }
 
@@ -38,16 +38,17 @@ form input.coolinput {
     padding: 15px;
     border: none;
     opacity: .7;
-    transition: .4s background-color;
     width: 215px;
 }
 
 form input#coolbutton {
     width: 100px !important;
+    background-color: #1B3D29;
+    transition: .4s background-color;
 }
 
 form input#coolbutton:hover {
-    background-color: #1B3D29;
+    background-color: #2A6944;
     cursor: pointer;
 }
 
