@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Barronged Bot</title>
+	<title>Barrong Bot</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
 	<div id="mainform">
 		<form action="./output.php" autocomplete="off" method="post">
+			<div class="radio-toolbar">
+				<input type="radio" id="radio1" name="method" value="report" checked>
+				<label for="radio1"> Report</label>
+				<input type="radio" id="radio2" name="method" value="commend">
+				<label for="radio2"> Commend</label>
+			</div>
+			<br>
 			<input type="password" name="passw" class="coolinput" placeholder="Password">
 			<input type="text" name="sid" class="coolinput" placeholder="1337 H4x0r">
-			<input type="submit" value="Barrong" id="coolbutton">
+			<input type="submit" value="Barrong" id="coolbutton" class="coolinput">
 		</form>
 	</div>
 

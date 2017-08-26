@@ -13,15 +13,16 @@ body {
     background: -moz-linear-gradient(bottom right, #1B3D29, #133337, #1B3D29);
     background: linear-gradient(to bottom right, #1B3D29, #133337, #1B3D29);
     overflow: hidden;
+    color: #ccc;
 }
 
 div#mainform {
     position: fixed;
     width: 640px;
-    height: 80px;
+    height: 130px;
     top: 50%;
     left: 50%;
-    margin-top: -40px;
+    margin-top: -65px;
     margin-left: -320px;
     padding: 17px;
     -webkit-box-sizing: border-box;
@@ -31,7 +32,7 @@ div#mainform {
     text-align: center;
 }
 
-form input {
+form input.coolinput {
     background-color: #133337;
     color: #ccc;
     padding: 15px;
@@ -48,4 +49,21 @@ form input#coolbutton {
 form input#coolbutton:hover {
     background-color: #1B3D29;
     cursor: pointer;
+}
+
+.radio-toolbar input[type="radio"] {
+    display: none;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: #133337;
+    padding: 4px 11px;
+    font-family: Arial;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.radio-toolbar input[type="radio"]:checked+label {
+    background-color: #1B3D29;
 }
